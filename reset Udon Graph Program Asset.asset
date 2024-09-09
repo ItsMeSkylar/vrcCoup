@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
+  m_Name: reset Udon Graph Program Asset
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: f1b5fa32d5355b841b9ebe18b758fea6,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    .export table\r\n    \r\n    __instance_0:
+    %VRCUdonUdonBehaviour, this\r\n    __target_0: %VRCUdonCommonInterfacesNetworkEventTarget,
+    null\r\n    __eventName_0: %SystemString, null\r\n    table: %VRCUdonUdonBehaviour,
+    this\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export _interact\r\n   
+    \r\n    _interact:\r\n    \r\n        PUSH, table\r\n        PUSH, __instance_0\r\n       
+    COPY\r\n        PUSH, __instance_0\r\n        PUSH, __target_0\r\n        PUSH,
+    __eventName_0\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n       
+    JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  assemblyError: 
+  graphData:
+    name: 
+    description: 
+    nodes:
+    - fullName: Variable_VRCUdonCommonInterfacesIUdonEventReceiver
+      uid: 395d9aba-1bec-41ad-a276-9af620723215
+      position: {x: 0, y: 0}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|table
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|True
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: Get_Variable
+      uid: 6bb188e7-2003-4636-a724-abd1c0eaaa62
+      position: {x: 392, y: 364}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|395d9aba-1bec-41ad-a276-9af620723215
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Event_Interact
+      uid: 262bf000-edb5-4551-8b4c-7fddb0bab6e2
+      position: {x: 476, y: 154}
+      nodeUIDs: []
+      flowUIDs:
+      - 0a027242-ea22-4a6b-be85-d0dddddd7420
+      nodeValues: []
+    - fullName: VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid
+      uid: 0a027242-ea22-4a6b-be85-d0dddddd7420
+      position: {x: 728, y: 154}
+      nodeUIDs:
+      - 6bb188e7-2003-4636-a724-abd1c0eaaa62|0
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: VRC.Udon.Common.Interfaces.NetworkEventTarget, VRC.Udon.Common,
+          Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|All
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|GameOver
+    updateOrder: 0
+  graphElementData: []
+  version: 1.0.0
+  showAssembly: 0
